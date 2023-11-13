@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>ChistOSO - Chistes de Animales</title>
+    <style>
+        #imagen {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: center;
+        }
+        .imagen-container {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .imagen-container img {
+            width: 320px;
+            height: 320px;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .imagen-container:hover img {
+            filter: brightness(70%);
+        }
+        .imagen-texto {
+         position: absolute;
+         top: 35%;
+         left: 50%;
+         transform: translateX(-50%);
+         color: rgb(249, 255, 249);
+         font-size: 1.5em;
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+        }
+        .imagen-container:hover .imagen-texto {
+        opacity: 1;
+        }   
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index3.html">
+            <img src="/assets/image/icon.png" alt="Ícono de mensaje" class="message-icon">
+        </a>
+    </p>
+        <h1>Bienvenido a ChistOSO</h1>
+        <p>¡La mejor fuente de risas con chistes de animales!</p>
+    </header>
+
+    <section id="chistes-semanales">
+        <h2>Chistes Semanales</h2>
+        <ul>
+            <li>¿Qué hace una abeja en el gimnasio? ¡Zum-ba!</li>
+            <li>¿Cuál es el animal más antiguo? La cebra, ¡porque está en blanco y negro!</li>
+            <li>¿Por qué los peces siempre saben cuánto pesan? Porque tienen sus propias escalas.</li>
+            <li>¿Qué hace un pingüino con una cámara? ¡Saca fotos en blanco y negro!</li>
+            <li>¿Por qué el pollo cruzó la carretera? Para llegar al otro lado, ¡obviamente!</li>
+            <li>¿Qué hace una pulga con una maleta? ¡Se va de vacaciones!</li>
+            <li>¿Cómo llama una abeja a su novio? ¡Mielito!</li>
+            <li>¿Cuál es el animal más antiguo de la Tierra? La garrapata, ¡porque está en todos lados desde siempre!</li>
+            <li>¿Por qué los pájaros no usan Facebook? ¡Porque ya tienen Twitter!</li>
+            <li>¿Cuál es el animal más divertido? La risa-dora.</li>
+            <li>¿Cómo llamas a una abeja que puede producir leche? ¡Una abeja-rra!</li>
+            <li>¿Qué hace una vaca cuando se aburre? Lee un "moo-sical".</li>
+            <li>¿Cuál es el pájaro más gracioso? ¡El chiste-rreo!</li>
+            <li>¿Cómo se comunica una abeja obrera con otra? Por correo zumbador.</li>
+            <li>¿Qué hace una rata con una espada? ¡Ro-ba-dor!</li>
+        </ul>
+    </section>
+
+    <section id="chistes-mensuales">
+        <h2>Chistes Mensuales</h2>
+        <ol>
+            <li>¿Por qué los elefantes no usan computadoras? Porque les tienen miedo a los ratones.</li>
+            <li>¿Qué hace una oveja cuando tiene frío? ¡Se pone una lanita!</li>
+            <li>¿Cuál es el animal más elegante? ¡El pingüino, siempre está de smoking!</li>
+            <li>¿Cómo llama un pez a otro pez? ¡Hola pez!</li>
+            <li>¿Por qué las vacas llevan siempre gafas de sol? Porque les encanta el pasto.</li>
+            <li>¿Qué hace una abeja en el cine? ¡Zum-ba película!</li>
+            <li>¿Cuál es el colmo para un electricista? No encontrar su corriente de trabajo.</li>
+            <li>¿Qué le dijo una impresora a otra? Esa hoja es tuya o es una impresión mía.</li>
+            <li>¿Cómo se llama un pájaro que siempre está enfermo? ¡Canario!</li>
+            <li>¿Por qué los pájaros no usan Facebook? ¡Porque ya tienen Twitter!</li>
+        </ol>
+    </section>
+    <section id="imagen">
+        <div class="imagen-container">
+            <a href="index2.html">
+                <img src="/assets/image/Videoosos.jfif" alt="Imagen 1" onmouseover="mostrarTexto(this)" onmouseout="ocultarTexto(this)">
+                <p class="imagen-texto" id="imagen1-texto">VideOSOS</p>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 ChistOSO - Todos los derechos reservados</p>
+    </footer>
+    <!--Me como a tu familia owo-->
+    <script>
+        function mostrarTexto(elemento) {
+            elemento.nextSibling.nextSibling.style.opacity = "1";
+        }
+
+        function ocultarTexto(elemento) {
+            elemento.nextSibling.nextSibling.style.opacity = "0";
+        }
+    </script>
+</body>
+</html>
