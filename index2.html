@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>VideoOSOS - Videos de Animales</title>
+    <style>
+        #imagen {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: center;
+        }
+        .imagen-container {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .imagen-container img {
+            width: 320px;
+            height: 320px;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .imagen-container:hover img {
+            filter: brightness(70%);
+        }
+        .imagen-texto {
+         position: absolute;
+         top: 35%;
+         left: 50%;
+         transform: translateX(-50%);
+         color: rgb(249, 255, 249);
+         font-size: 1.5em;
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+        }
+        .imagen-container:hover .imagen-texto {
+        opacity: 1;
+        }   
+    </style>
 </head>
 
 <body>
@@ -26,15 +61,30 @@
 
     <section id="chistes-mensuales">
         <h2>Video Mensual</h2>
-        <video width="320" height="360" controls>
-            <source src="/assets/video/osos.mp4" type="video/mp4">
+        <video width="320" height="300" controls>
+            <source src="/assets/video/osos.mp4" type="video/mp4" class="video-oso"> 
     </section>
     <section id="imagen">
         <div class="imagen-container">
             <a href="index.html">
                 <img width="320px"  height="" src="/assets/image/Ftografoso.jfif" alt="Imagen 1">
+                <p class="imagen-texto" id="imagen1-texto">FotOSOS</p>
             </a>
         </div>
     </section>
+    <footer>
+        <p>&copy; 2023 ChistOSO - Todos los derechos reservados</p>
+    </footer>
+    <!--Me como a tu familia owo-->
+    <script>
+        function mostrarTexto(elemento) {
+            elemento.nextSibling.nextSibling.style.opacity = "1";
+        }
+
+        function ocultarTexto(elemento) {
+            elemento.nextSibling.nextSibling.style.opacity = "0";
+        }
+    </script>
+    
 </html>
 
